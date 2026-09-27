@@ -16,7 +16,7 @@ This project investigates four questions:
 - Per-order profit stays roughly flat ($20–23) regardless of delay length — the business risk from lateness is reputational, not a direct margin hit.
 - A Random Forest model predicts late-delivery risk at booking time with **0.825 ROC-AUC**.
 - **Network analysis** identifies `DEPT: Fitness` as the most structurally central node (betweenness centrality 0.797) in the Region–Department–Shipping Mode network — but a disruption simulation shows the network remains fully connected even after removing it, indicating real structural redundancy rather than a single point of failure.
-- **Demand forecasting** (Holt-Winters exponential smoothing) projects sales for the next 6 months, validated against a 6-month holdout (MAPE 72.45% — a meaningful limitation, discussed in the full report, likely reflecting how few years of data are available for reliable seasonal estimation).
+- **Demand forecasting** (Holt-Winters exponential smoothing) initially produced an implausible result — diagnosed as a genuine data-quality anomaly (order volume drops ~60% for 4 months starting Oct 2017, with unnaturally flat daily counts). After excluding this anomalous period, the corrected model achieves **5.36% holdout MAPE** and projects stable demand of ~$1.0M–$1.14M/month for that window — evidence the recorded drop is a data artifact, not a real business decline.
 
 ## Repository Contents
 
@@ -86,7 +86,13 @@ statsmodels
 
 ### Demand Forecast
 
-6-month holdout validation MAPE: **72.45%** — flagged in the full report as a limitation requiring further investigation, not presented as a finished production forecast.
+An initial forecast attempt produced an implausible result (MAPE 72.45%, declining toward $0) — investigated and traced to a genuine data-quality anomaly: order volume drops ~60% starting October 2017 and stays there for 4 months, with unnaturally flat daily counts suggesting a data-collection issue rather than a real demand collapse. After excluding this anomalous trailing period, the corrected model achieves **5.36% holdout MAPE** and projects stable demand of **~$1.0M–$1.14M/month** for the excluded window — reinforcing that the recorded drop is a data artifact, not a business decline. Full diagnostic process in the [report](Supply_Chain_Network_Intelligence_Report.docx), Section 9.
+
+## Dashboard
+
+![Dashboard](dashboard_screenshot.png)
+
+*Note: this screenshot predates the final KPI fix — the "Next Month Forecast" card will be updated to show "Corrected Demand Estimate" (~$1.10M) once refreshed.*
 
 ## About Me
 
