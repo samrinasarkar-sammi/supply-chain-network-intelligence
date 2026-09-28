@@ -86,13 +86,13 @@ statsmodels
 
 ### Demand Forecast
 
-An initial forecast attempt produced an implausible result (MAPE 72.45%, declining toward $0) — investigated and traced to a genuine data-quality anomaly: order volume drops ~60% starting October 2017 and stays there for 4 months, with unnaturally flat daily counts suggesting a data-collection issue rather than a real demand collapse. After excluding this anomalous trailing period, the corrected model achieves **5.36% holdout MAPE** and projects stable demand of **~$1.0M–$1.14M/month** for the excluded window — reinforcing that the recorded drop is a data artifact, not a business decline. Full diagnostic process in the [report](Supply_Chain_Network_Intelligence_Report.docx), Section 9.
+An initial forecast attempt produced an implausible result (MAPE 72.45%, declining toward $0) — investigated and traced to a genuine data-quality anomaly: order volume drops ~60% starting October 2017 and stays there for 4 months, with unnaturally flat daily counts suggesting a data-collection issue rather than a real demand collapse. After excluding this anomalous trailing period, the corrected model achieves 5.36% holdout MAPE and projects stable demand of ~$1.0M–$1.14M/month for the excluded window — reinforcing that the recorded drop is a data artifact, not a business decline. Full diagnostic process in the report, Section 9.
 
 ## Dashboard
 
-![Dashboard](<img width="1257" height="687" alt="image" src="https://github.com/user-attachments/assets/7647cf78-9dfa-46df-8c16-fd8ff36fdfb9" />)
+<img width="1257" height="687" alt="Screenshot 2026-09-28 213727" src="https://github.com/user-attachments/assets/27689f29-7272-41a1-b397-ccfbf132ff61" />
 
-*Note: this screenshot predates the final KPI fix — the "Next Month Forecast" card will be updated to show "Corrected Demand Estimate" (~$1.10M) once refreshed.*
+
 
 ## About Me
 
