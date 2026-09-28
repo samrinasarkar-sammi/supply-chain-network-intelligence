@@ -49,6 +49,19 @@ Order-level supply chain data: shipping mode, order status, delivery dates, prod
 9. **NEW — Demand forecasting** — Holt-Winters exponential smoothing (damped trend, multiplicative seasonality) on monthly sales, validated on a 6-month holdout
 10. **NEW — Interactive dashboard** — Power BI dashboard combining KPIs, delay/profit breakdowns, network centrality, and the sales forecast, with searchable slicers for Region, Department, Shipping Mode, and Customer Segment
 
+## Requirements
+
+```
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+imbalanced-learn
+networkx
+statsmodels
+```
+
 ## Key Results
 
 ### Late-Delivery Risk Model
@@ -79,6 +92,7 @@ An initial forecast attempt produced an implausible result (MAPE 72.45%, declini
 
 ![Dashboard](dashboard_screenshot.png)
 
+*Note: this screenshot predates the final KPI fix — the "Next Month Forecast" card will be updated to show "Corrected Demand Estimate" (~$1.10M) once refreshed.*
 
 ## About Me
 
