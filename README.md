@@ -90,7 +90,7 @@ An initial forecast attempt produced an implausible result (MAPE 72.45%, declini
 
 ## Dashboard
 
-![Dashboard](dashboard_screenshot.png)
+![Dashboard](<img width="1257" height="687" alt="image" src="https://github.com/user-attachments/assets/7647cf78-9dfa-46df-8c16-fd8ff36fdfb9" />)
 
 *Note: this screenshot predates the final KPI fix — the "Next Month Forecast" card will be updated to show "Corrected Demand Estimate" (~$1.10M) once refreshed.*
 
