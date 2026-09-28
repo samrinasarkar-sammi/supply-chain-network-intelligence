@@ -24,13 +24,13 @@ This project investigates four questions:
 |---|---|
 | `Supply_Chain_Analysis_Project.ipynb` | Full analysis notebook: cleaning, EDA, profitability, bottleneck/root-cause detection, time-based patterns, ML risk modeling, network analysis, and forecasting |
 | `DataCoSupplyChainDataset.csv` | Source dataset (see [Data](#data) below) |
-| `Supply_Chain_Network_Intelligence_Report.docx` | Full written report: executive summary, KPIs, findings, network analysis, forecasting, dashboard, recommendations, and proposed next-phase research direction |
+| `Supply_Chain_Network_Intelligence_Report.pdf` | Full written report: executive summary, KPIs, findings, network analysis, forecasting, dashboard, recommendations, and proposed next-phase research direction |
 | `supply_chain_cleaned.csv` | Cleaned, feature-engineered dataset (dashboard source) |
 | `network_centrality.csv` | Node-level degree/betweenness centrality results |
 | `network_edges.csv` | Network edge list (Region–Department–Shipping Mode flows) |
 | `network_graph.png` | Visualized logistics network, sized/colored by centrality |
 | `sales_timeline.csv` | Combined actual + forecasted monthly sales |
-| `dashboard.pbix` | Interactive Power BI dashboard |
+| `dashboard overview.pbix` | Interactive Power BI dashboard |
 
 ## Data
 
